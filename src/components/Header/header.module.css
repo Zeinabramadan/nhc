@@ -1,0 +1,32 @@
+.header {
+  background-color: #D9D9D91F;
+  height: 80px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.header_logo {
+  width: 60px;
+  height: 60px;
+}
+
+.navbar {
+  margin-left: 4rem;
+}
+
+.navbar_list {
+  display: flex;
+}
+
+.navbar_list__item {
+  padding: 2rem;
+}
+
+.navbar_list__item:hover a {
+  color: #006483;
+}
+
+.active {
+  color: #006483;
+}
