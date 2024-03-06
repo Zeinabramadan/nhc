@@ -47,3 +47,16 @@ ul {
   margin-bottom: 20px;
   line-height: 2;
 }
+
+
+/* inputs */
+
+.input {
+  background: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 0.8em 0.5em;
+  max-width: 100%;
+  width: 100%;
+  font-family: inherit;
+}

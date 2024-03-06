@@ -1,0 +1,12 @@
+
+.search {
+  max-width: 50%;
+  margin: 4rem auto;
+}
+
+.search_title {
+  color: #355f99;
+  font-weight: 500;
+  margin-bottom: 20px;
+  display: inline-block;
+}
