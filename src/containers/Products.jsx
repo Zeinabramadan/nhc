@@ -2,7 +2,7 @@
 
 import React, { Fragment } from 'react'
 
-import ProductItem from '../components/Card/Card';
+import Card from '../components/Card/Card';
 
 import styles from './products.module.css'
 
@@ -20,7 +20,7 @@ export default function Products() {
     <Fragment>
       <div className={styles.products}>
         {searchQuery && products && products.map(item => (
-          <ProductItem item={item} />
+          <Card item={item} key={item.id} />
         ))}
       </div>
     </Fragment>
