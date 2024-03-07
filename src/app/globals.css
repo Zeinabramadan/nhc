@@ -18,8 +18,15 @@ body {
   font-style: normal;
 }
 
+h1, h2,
+h3, h4,
+h5, h6 {
+  font-weight: 400;
+}
+
 main {
   padding: 4rem 8rem;
+  min-height: 80vh;
 }
 
 a {
@@ -72,3 +79,8 @@ ul {
   border-radius: 5px;
 }
 
+@media only screen and (max-width: 1152px) {
+  main {
+    padding: 2rem 4rem;
+  }
+}

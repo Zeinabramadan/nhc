@@ -3,7 +3,6 @@
   color: #fff;
   padding: 2em 5em;
   padding-top: 3em;
-  margin-top: 14rem;
 }
 
 .footer_wrapper {
@@ -18,4 +17,10 @@
   height: 50px;
   display: inline-block;
   margin-right: 2em;
+}
+
+@media only screen and (max-width: 1152px) {
+  .footer_wrapper {
+    flex-direction: column;
+  }
 }

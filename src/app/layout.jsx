@@ -1,7 +1,10 @@
 import Header from '@/components/Header/Header'
-import Footer from '@/components/Footer/Footer'
 import './globals.css'
+import Footer from '@/components/Footer/Footer'
+import { Inter } from 'next/font/google'
 import { ProductsProvider } from '@/context/productsContext'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'NHC',
@@ -13,7 +16,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
           <ProductsProvider>
-            <main>
+            <main className={inter.className} style={inter.style}>
               {children}
             </main>
           </ProductsProvider>
