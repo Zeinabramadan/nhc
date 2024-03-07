@@ -5,9 +5,9 @@ const productsContext = React.createContext()
 const { Provider } = productsContext
 
 const initState = {
-	items: [],
+	products: [],
 	loading: false,
-	searchQuery: 'test',
+	searchQuery: '',
 }
 
 function useProducts() {
@@ -20,13 +20,12 @@ function useProducts() {
 	return context
 }
 
-// eslint-disable-next-line complexity
 function reducer(state, action) {
 	switch (action.type) {
 		case 'RECEIVE_PRODUCTS_ITEMS':
 			return {
 				...state,
-				items: action.items,
+				products: action.products,
 			}
 
     case 'SET_SEARCH_QUERY': {
@@ -46,8 +45,5 @@ function ProductsProvider({ children }) {
 
 	return <Provider value={value}>{children}</Provider>
 }
-
-ProductsProvider.defaultProps = { children: <div /> }
-
 
 export { useProducts, ProductsProvider }

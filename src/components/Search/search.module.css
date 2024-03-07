@@ -2,6 +2,7 @@
 .search {
   max-width: 50%;
   margin: 4rem auto;
+  margin-top: 0;
 }
 
 .search_title {
@@ -9,4 +10,8 @@
   font-weight: 500;
   margin-bottom: 20px;
   display: inline-block;
+}
+
+.search_result {
+  margin-top: 20px;
 }

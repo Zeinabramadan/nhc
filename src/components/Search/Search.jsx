@@ -1,48 +1,40 @@
 'use client'
 
-import React, { useState } from 'react'
+import React from 'react'
 
 import styles from './search.module.css'
 import { useProducts } from '../../context/productsContext'
+import getProductsItems from '@/service/getProducts';
 
 export default function Search() {
-  const [{searchQuery}, dispatch] = useProducts();
+  const [{searchQuery, products}, dispatch] = useProducts();
 
    const handleChange = (e) => {
-    e.preventDefault()
+    const { value } = e.target;
     dispatch({
       type: 'SET_SEARCH_QUERY',
-      query: e.target.value,
+      query: value,
     })
-    
-    fetch(`https://dummyjson.com/products/search?q=${searchQuery}`)
-      .then(res => {
-        if (res.status === 200) {
-          res.json().then((response) => {
-            dispatch({
-              type: 'RECEIVE_PRODUCTS_ITEMS',
-              items: response.products,
-            })
-          })
-        }
-      }).catch( (error) => {
-        serError('Something went wrong!');
-      });
+    getProductsItems(value, dispatch)
    }
 
   return (
     <div className={styles.search}>
       <span className={styles.search_title}>Search products by keyword</span>
-      <form>
-        <input
-          type="text"
-          placeholder='search keyword'
-          className='input'
-          value={searchQuery}
-          onChange={handleChange}
-        />
-        <button type="submit">Search</button>
-      </form>
+      <input
+        type="text"
+        placeholder='Search keyword'
+        className='input'
+        value={searchQuery}
+        onChange={handleChange}
+      />
+      {searchQuery && products.length >= 0 && (
+        <div
+          className={styles.search_result}
+        >
+          Total results count: <span className='active'>{products.length}</span>
+        </div>
+      )}
     </div>
   )
 }

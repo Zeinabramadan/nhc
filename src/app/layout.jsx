@@ -1,8 +1,7 @@
-import Navbar from '@/components/Header/Header'
-import './globals.css'
+import Header from '@/components/Header/Header'
 import Footer from '@/components/Footer/Footer'
+import './globals.css'
 import { ProductsProvider } from '@/context/productsContext'
-
 
 export const metadata = {
   title: 'NHC',
@@ -12,12 +11,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-          <main>
-            <ProductsProvider>
+        <Header />
+          <ProductsProvider>
+            <main>
               {children}
-            </ProductsProvider>
-          </main>
+            </main>
+          </ProductsProvider>
         <Footer/>
       </body>
     </html>

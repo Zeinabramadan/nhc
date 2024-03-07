@@ -1,0 +1,14 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.notFound_text {
+  display: inline-block;
+  margin: 20px 0;
+  color: #7F7F7F;
+  width: 177px;
+  text-align: center;
+  line-height: 1.5;
+}
