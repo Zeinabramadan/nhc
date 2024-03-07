@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import styles from './productItem.module.css'
+import styles from './card.module.css'
 
 export default function ProductItem({item}) {
   return (

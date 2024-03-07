@@ -1,6 +1,7 @@
+import * as ActionTypes from '../context/actionTypes.products'
 
 export default function getProductsItems(searchQuery, dispatch) {
-		let url = 'https://dummyjson.com/products';
+		let url = `${process.env.NEXT_PUBLIC_API_URL}/products`;
 
 		if (searchQuery) {
 			url += `/search?q=${searchQuery}`;
@@ -10,7 +11,7 @@ export default function getProductsItems(searchQuery, dispatch) {
       if (res.status === 200) {
         res.json().then((response) => {
           dispatch({
-            type: 'RECEIVE_PRODUCTS_ITEMS',
+            type: ActionTypes.RECEIVE_PRODUCTS_ITEMS,
             products: response.products,
           })
         })

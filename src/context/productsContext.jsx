@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import * as ActionTypes from './actionTypes.products'
 
 const productsContext = React.createContext()
 const { Provider } = productsContext
@@ -22,13 +23,13 @@ function useProducts() {
 
 function reducer(state, action) {
 	switch (action.type) {
-		case 'RECEIVE_PRODUCTS_ITEMS':
+		case ActionTypes.RECEIVE_PRODUCTS_ITEMS:
 			return {
 				...state,
 				products: action.products,
 			}
 
-    case 'SET_SEARCH_QUERY': {
+    case ActionTypes.SET_SEARCH_QUERY: {
       return {
         ...state,
         searchQuery: action.query,

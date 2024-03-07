@@ -2,7 +2,7 @@
 
 import React, { Fragment } from 'react'
 
-import ProductItem from '../components/ProductItem/ProductItem';
+import ProductItem from '../components/Card/Card';
 
 import styles from './products.module.css'
 
@@ -13,7 +13,7 @@ export default function Products() {
   const [{products, searchQuery}] = useProducts();
 
   if (searchQuery && products.length == 0) {
-    return (<Notfound/>)
+    return <Notfound/>
   }
 
   return (

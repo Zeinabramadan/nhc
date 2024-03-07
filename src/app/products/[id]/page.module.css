@@ -10,7 +10,7 @@
 
 .product_header h1 {
   font-size: 30px;
-  color: #285F9D;
+  color: var(--mainColor);
   margin-bottom: 20px;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .productDetails span {
-  color: #285F9D;
+  color: var(--mainColor);
   font-weight: 500;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .productDescription p {
-  color: #7F7F7F;
+  color: var(--textColor);
 }
 
 .productImages {

@@ -4,7 +4,8 @@ import React from 'react'
 
 import styles from './search.module.css'
 import { useProducts } from '../../context/productsContext'
-import getProductsItems from '@/service/getProducts';
+import getProductsItems from '@/services/getProducts';
+import * as ActionTypes from '../../context/actionTypes.products'
 
 export default function Search() {
   const [{searchQuery, products}, dispatch] = useProducts();
@@ -12,7 +13,7 @@ export default function Search() {
    const handleChange = (e) => {
     const { value } = e.target;
     dispatch({
-      type: 'SET_SEARCH_QUERY',
+      type: ActionTypes.SET_SEARCH_QUERY,
       query: value,
     })
     getProductsItems(value, dispatch)
@@ -29,9 +30,7 @@ export default function Search() {
         onChange={handleChange}
       />
       {searchQuery && products.length >= 0 && (
-        <div
-          className={styles.search_result}
-        >
+        <div className={styles.search_result}>
           Total results count: <span className='active'>{products.length}</span>
         </div>
       )}

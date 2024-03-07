@@ -1,7 +1,7 @@
 import { ProductsProvider } from '../context/productsContext'
-import Home from '../app/products/page'
 import React from 'react'
+import ProductsHome from '../app/products/page'
 
 export default function page() {
-  return <Home />
+  return <ProductsHome />
 }

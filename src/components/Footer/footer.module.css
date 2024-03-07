@@ -1,6 +1,6 @@
 .footer {
-  background-color: #292759;
-  color: #fff;
+  background-color: var(--indigo);
+  color: var(--white);
   padding: 2em 5em;
   padding-top: 3em;
 }
@@ -10,17 +10,12 @@
   justify-content: space-between;
   align-items: center;
   padding-top: 1em;
-  border-top: 1px solid #7f7f7f;
+  border-top: 1px solid var(--textColor);
 }
+
 .right_footer > img {
   width: 50px;
   height: 50px;
   display: inline-block;
   margin-right: 2em;
-}
-
-@media only screen and (max-width: 1152px) {
-  .footer_wrapper {
-    flex-direction: column;
-  }
 }

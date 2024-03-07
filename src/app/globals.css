@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 
+:root {
+  --mainColor: #285F9D;
+  --secondaryColor: #3d78bb;
+  --textColor: #7F7F7F;
+  --white: #fff;
+  --black: #000;
+  --lightGrey: #f7f7f7;
+  --medGrey: #ddd;
+  --indigo: #292759;
+  --mediumMedia: 1152px;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -31,7 +43,7 @@ main {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: var(--black);
 }
 
 ul {
@@ -39,7 +51,7 @@ ul {
 }
 
 .active {
-  color: #285F9D;
+  color: var(--mainColor);
 }
 
 /* Global styles for sections */
@@ -50,7 +62,7 @@ ul {
 
 .section > h2 {
   font-size: 18px;
-  color: #285F9D;
+  color: var(--mainColor);
   margin-bottom: 20px;
 }
 
@@ -63,8 +75,8 @@ ul {
 /* inputs */
 
 .input {
-  background: #f7f7f7;
-  border: 1px solid #ddd;
+  background: var(--lightGrey);
+  border: 1px solid var(--secondaryColor);
   border-radius: 3px;
   padding: 0.8em 0.5em;
   max-width: 100%;
@@ -73,10 +85,14 @@ ul {
 }
 
 .button {
-  color: #fff;
-  background: #285F9D;
+  color: var(--white);
+  background-color: var(--mainColor);
   padding: 0.5em 1em;
   border-radius: 5px;
+}
+
+.button:hover {
+  background-color: var(--secondaryColor);
 }
 
 @media only screen and (max-width: 1152px) {

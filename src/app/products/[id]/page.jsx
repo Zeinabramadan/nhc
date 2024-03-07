@@ -3,7 +3,7 @@ import React from 'react'
 import Image from 'next/image';
 import StarRating from 'react-star-rating-component';
 
-import getProduct from '../../../service/getProduct';
+import getProduct from '../../../services/getProduct';
 import styles from './page.module.css'
 
 export default async function Page({ params }) {
@@ -45,7 +45,7 @@ export default async function Page({ params }) {
         <h2>Product Images</h2>
         <div>
           {product.images.map(img => (
-            <Image src={img} key={img} width={200} height={120} />
+            <Image alt={product.title} src={img} key={img} width={200} height={120} />
           ))}
         </div>
       </div>

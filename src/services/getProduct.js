@@ -1,6 +1,6 @@
 
 export default async function getProduct(id) {
-		let url = `https://dummyjson.com/products/${id}`;
+		let url = `${process.env.NEXT_PUBLIC_API_URL}/products/${id}`;
 
     const response = await fetch(url)
     

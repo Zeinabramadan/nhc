@@ -7,7 +7,7 @@
 .notFound_text {
   display: inline-block;
   margin: 20px 0;
-  color: #7F7F7F;
+  color: var(--textColor);
   width: 200px;
   text-align: center;
   line-height: 1.5;
